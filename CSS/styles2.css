@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+/* Neste arquivo, faremos TODAS as REGRAS CSS necessárias para a formatação do site! */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(../imagens/watercolor.png);
+  color: black;
+  background-attachment: fixed;
+  
+}
+
+h1{
+   animation-name: caindo;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+
+   font-family: 'Poppins', sans-serif;
+
+   color: rgb(250, 210, 217);
+   text-align: center;
+   background-color:rgb(253, 103, 183);
+   padding: 10px;
+   box-shadow: #E3A3E2 inset 0 0 25px 20px;
+   text-transform: uppercase;
+   border: rgb(241, 170, 212) solid 3px;
+    
+}
+
+#conteiner{
+   background-color: rgb(197, 0, 138);
+   width: 80%;
+   max-width: 1000px;
+   min-width: 500px;
+   margin: auto;
+   box-shadow: rgb(53, 0, 16) 0 0 10px;
+   padding: 16px;
+   border-radius: 40px;
+     
+}
+
+h2{
+   font-size: 25px;
+   color: rgb(197, 0, 138);
+   border-radius: 10px;
+   border-bottom: solid 5px;
+   border-left: dotted 5px;
+   border-right: dotted 5px;
+   padding-left: 5px;
+}
+
+h3{
+   border-radius: 10px;
+   background: linear-gradient(to right, #E3A3E2, #EAB6FD,#FBC1DD );
+   color: rgb(255, 0, 255);
+   size: 16px;
+   padding: 10px;
+   
+}
+
+p, figcaption {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.destaque {
+   background-color: #EAB6FD;
+   padding: 3px;
+   color: #fd228c;
+   border-radius: 4px;
+
+}
+
+figure {
+   margin: 0%;
+   text-align: center;
+}
+
+img {
+   max-width: 100%;
+   }
+
+   /* Seletor descendente */
+
+p a{
+   text-decoration: none;
+   color: pink
+}
+
+
+/* Regras para menu */
+
+ #menu {
+   text-align: center;
+   /* background-color: #FB76B6; */ 
+ }
+ 
+/* Regra para estado incial do link */
+
+nav a {
+   font-size: 15px;
+   text-decoration: none;
+   font-weight: bold;
+   color: #fd228c;
+   background-color: #FB76B6;
+   width: 50%;
+   display: inline-block;
+   letter-spacing: 5px;
+   cursor: pointer;
+   /* overflow-y:scroll; */
+   padding: 12px;
+   /* Alterando o BOX MODEL fazendo com que padding e border não de BO nas dimensões finais do elemento */
+   box-sizing: border-box; 
+}
+
+/* Seletor Pseudo-Classe: firt-child */
+nav a:first-child {
+   border-top-left-radius: 12px;
+   border-bottom-left-radius: 12px;
+   border-top-right-radius: 12px;
+   border-bottom-right-radius: 12px;
+}
+
+/* Seletor Pseudo-Classe: last-child */
+nav a:last-child {
+   border-top-right-radius: 12px;
+   border-bottom-right-radius: 12px;
+   border-top-left-radius: 12px;
+   border-bottom-left-radius: 12px;
+}
+
+/* Regra para o estado do link acionada 
+Pseudo-Classe :hover (mouse)
+Pseudo-Classe :focus (receber foco)
+*/
+
+nav a:hover, nav a:focus {
+   background-color:#FBC1DD;
+   color:#EAB6FD;
+   cursor:pointer;
+
+}
+
+ul{
+   margin: 0%;
+}
+
+li{
+   color: rgb(0, 0, 0);
+   /* list-style-image: url(../imagens/fundo03.gif); */
+   margin-bottom: 10px;
+   padding: 5px;
+}
+
+/* Regra para estado do link acionado */
+
+/* Seletor PSEUDO-ELEMENTO (usa 2x o dois ponto ::) */
+li::marker {
+   content: "💻"; /* tecla windows + ponto para emoji */
+}
+
+ul li a{
+   font-size: 15pt;
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+}
+
+figure img {
+   filter: grayscale();
+   transition: 1s;
+   /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
+  transform: scale(0.8);
+   
+   
+}
+
+figure img:hover {
+   filter: none;
+   /* clip-path: polygon(50% 0%, 100% 0, 100% 34%, 100% 62%, 100% 100%, 48% 100%, 0 100%, 0 58%, 0 34%, 0 0); */
+   transform: scale(1) /*rotate(360deg)*/; 
+}
+
+
+
+/* Regras de Animação */
+
+
+@keyframes caindo {
+   /* Como Começa */
+   from {
+         transform: translateY(-100px);
+         opacity: 0;
+         
+   }
+
+   /* Como termina */
+   To {
+      transform: translateY(0px);
+   }
+}
+
+/* Pseudo-Classes
+:first-child
+:last-child
+:nth-child */
+
+li:first-child {
+   color: red;
+}
+
+li:last-child {
+   color: blue;
+}
+
+li:nth-child(2n+1) {
+   background-color: pink;
+   color: blue;
+   
+}
+
